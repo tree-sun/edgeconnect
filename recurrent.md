@@ -26,3 +26,28 @@ https://github.com/knazeri/edge-connect<br>
 > 问题二:<br>
 > ![](https://github.com/tree-sun/edgeconnect/blob/main/screenshot/error_3.png)<br>
 > 解决方法:安装其他版本的包，如果找不到的话，在cmd中激活虚拟环境，采用pip install 名称  进行安装<br>
+
+五、下载官方的 checkpoints<br>
+> 新建checkpoints文件夹，然后下载预训练模型，并将其复制到 ./checkpoints 目录下<br>
+
+六、运行test.py文件<br>
+> 问题一:ImportError: cannot import name 'PILLOW_VERSION' from 'PIL'<br>
+>> 原因是pillow版本太高<br>
+>> 解决方法:打开functional.py文件，将from PIL import Image, ImageOps, ImageEnhance, PILLOW_VERSION 改为 from PIL import Image, ImageOps, ImageEnhance, __ version__<br>
+
+> 问题二:ImportError: cannot import name 'imread' from 'scipy.misc' <br>
+>> 原因是scipy库的版本太高，新版把imread删除了<br>
+>> 解决方法:安装imageio库，并找到调用imread的地方，加入from imageio import imread<br>
+
+> 问题三:OMP: Error #15: Initializing libiomp5md.dll, but found libiomp5md.dll already initialized.<br>
+> OMP: Hint This means that multiple copies of the OpenMP runtime have been linked into the program. That is dangerous.....<br>
+>> 解决方案:加入以下两行代码<br>
+>> import os<br>
+>> os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"<br>
+
+> 问题四:self._dict = yaml.load(self._yaml)   TypeError: load() missing 1 required positional argument: 'Loader'<br>
+>> 原因:YAML5.1弃用了yaml.load(file)这个用法,5.1版本之后就修改了需要指定Loader，通过默认加载器（FullLoader）禁止执行任意函数，该load函数也变得更加安全<br>
+>> 解决方法:<br>
+>>> 方法1:self._dict = yaml.load(self._yaml, Loader=yaml.FullLoader)<br>
+>>> 方法2:self._dict = yaml.safe_load(self._yaml)<br>
+>>> 方法3:self._dict = yaml.load(self._yaml, Loader=yaml.CLoader)<br>
