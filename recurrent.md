@@ -55,3 +55,12 @@ https://github.com/knazeri/edge-connect<br>
 > 问题五:Downloading: "https://download.pytorch.org/models/vgg19-dcbb9e9d.pth" to C:\Users\zhan/.cache\torch\hub\checkpoints\vgg19-dcbb9e9d.pth<br>
 >> 下载速度过慢<br>
 >> 直接下载vgg19-dcbb9e9d.pth到指定位置，然后重新执行即可。<br>
+
+七、运行train.py文件<br>
+> 加上import os 和 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"<br>
+> 问题二:如下所示<br>
+>> ![](https://github.com/tree-sun/edgeconnect/blob/main/screenshot/1.png)<br>
+>> 问题原因:shuffle的参数设置错误，因为已有batch_sample，不需要shuffle来进行随机的sample了，故shuffle设置为FALSE<br>
+>> 解决方法:更改更改edge_connect.py文件，将shuffle设置为FALSE<br>
+
+> 问题三:No training data was provided! Check 'TRAIN_FLIST' value in the configuration file.<br>
