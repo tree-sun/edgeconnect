@@ -51,3 +51,7 @@ https://github.com/knazeri/edge-connect<br>
 >>> 方法1:self._dict = yaml.load(self._yaml, Loader=yaml.FullLoader)<br>
 >>> 方法2:self._dict = yaml.safe_load(self._yaml)<br>
 >>> 方法3:self._dict = yaml.load(self._yaml, Loader=yaml.CLoader)<br>
+
+> 问题五:Downloading: "https://download.pytorch.org/models/vgg19-dcbb9e9d.pth" to C:\Users\zhan/.cache\torch\hub\checkpoints\vgg19-dcbb9e9d.pth<br>
+>> 下载速度过慢<br>
+>> 直接下载vgg19-dcbb9e9d.pth到指定位置，然后重新执行即可。<br>
