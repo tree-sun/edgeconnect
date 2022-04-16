@@ -19,3 +19,10 @@ https://github.com/knazeri/edge-connect<br>
 > 解决方法:关掉VPN<br>
 
 安装requirements.txt最好是在pycharm中进行安装。方法:在pycharm中打开requirements.txt文件，它会自动询问是否安装。<br>
+在pycharm中安装包时，可能会遇到以下问题<br>
+> 问题一:<br>
+> ![](https://github.com/tree-sun/edgeconnect/blob/main/screenshot/error_2.png)<br>
+> 解决方法:关闭VPN<br>
+> 问题二:<br>
+> ![](https://github.com/tree-sun/edgeconnect/blob/main/screenshot/error_3.png)<br>
+> 解决方法:安装其他版本的包，如果找不到的话，在cmd中激活虚拟环境，采用pip install 名称  进行安装<br>
