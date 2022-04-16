@@ -1,6 +1,8 @@
 ### 参考网址
-https://benpaodewoniu.github.io/2020/06/02/edge0/<br>
-
+(网页教程)https://benpaodewoniu.github.io/2020/06/02/edge0/<br>
+(视频教程)https://www.bilibili.com/video/BV15o4y127Rt/?spm_id_from=333.788.recommend_more_video.0<br>
+### 项目代码
+https://github.com/knazeri/edge-connect<br>
 ### 复现过程
 一、创建虚拟环境  conda create -n edge python=3.8<br>
 二、激活虚拟环境  activate edge<br>
@@ -10,4 +12,10 @@ https://benpaodewoniu.github.io/2020/06/02/edge0/<br>
 > 如何验证pytorch安装完成呢？<br>
 >> 打开python  输入import torch 如果出现 >>> 说明安装成功<br>
 
-四、
+四、安装requirements.txt<br>
+> 安装python依赖包时出现了错误:ValueError: check_hostname requires server_hostname,如下图所示<br>
+
+![](https://github.com/tree-sun/edgeconnect/blob/main/screenshot/error_1.jpg)<br>
+> 解决方法:关掉VPN<br>
+
+安装requirements.txt最好是在pycharm中进行安装。方法:在pycharm中打开requirements.txt文件，它会自动询问是否安装。<br>
