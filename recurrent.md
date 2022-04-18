@@ -11,6 +11,7 @@ https://github.com/knazeri/edge-connect<br>
 > pip install torchvision==0.2.1 -i https://pypi.tuna.tsinghua.edu.cn/simple<br>
 > 如何验证pytorch安装完成呢？<br>
 >> 打开python  输入import torch 如果出现 >>> 说明安装成功<br>
+>> 查看pytorch版本  import torch   print(torch.__ version__) <br>
 
 四、安装requirements.txt<br>
 > 安装python依赖包时出现了错误:ValueError: check_hostname requires server_hostname,如下图所示<br>
