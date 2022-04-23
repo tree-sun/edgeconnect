@@ -57,6 +57,8 @@ https://github.com/knazeri/edge-connect<br>
 >> 下载速度过慢<br>
 >> 直接下载vgg19-dcbb9e9d.pth到指定位置，然后重新执行即可。<br>
 
+> 问题六: cv2 -> opencv库  skimage -> scikit-image库<br>
+
 七、运行train.py文件<br>
 > 加上import os 和 os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"<br>
 > 问题二:如下所示<br>
